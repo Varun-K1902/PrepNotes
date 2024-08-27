@@ -29,16 +29,18 @@
                           {{i.icon|safe}}
                       </div>
                       <h2 class="text-lg text-gray-900 dark:text-white font-medium title-font mb-2 flex-grow">{{i}}</h2>
-                      {% if i.title|length > 35 %}
-                          <p class="leading-relaxed text-base text-gray-600 dark:text-gray-400">Get your {{i.description}} notes here</p>
-                      {% else %}
-                          <p class="leading-relaxed text-base text-gray-600 dark:text-gray-400">Get your {{i}} notes here</p>
-                      {% endif %}
+                      <p class="leading-relaxed text-base text-gray-600 dark:text-gray-400 flex-grow">
+                          {% if i.title|length > 35 %}
+                              Get your {{i.description}} notes here
+                          {% else %}
+                              Get your {{i}} notes here
+                          {% endif %}
+                      </p>
                   </div>
               </a>
           </div>
           {% endfor %}
-      </div>      
+      </div>        
         </div>
     </div>
 
