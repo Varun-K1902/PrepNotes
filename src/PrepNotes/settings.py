@@ -25,7 +25,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['prepnotes.me', 'hydrophobic-finch-y97ovybh7zbyky6voacx8o78.herokudns.com']
+ALLOWED_HOSTS = ['prepnotes.me', 'hydrophobic-finch-y97ovybh7zbyky6voacx8o78.herokudns.com', 'prepnotes-999c25a3799e.herokuapp.com']
 
 
 # Application definition
