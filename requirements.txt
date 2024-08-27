@@ -1,3 +1,6 @@
 django
 django-tailwind
 django-tinymce
+gunicorn
+django-heroku
+python-decouple
