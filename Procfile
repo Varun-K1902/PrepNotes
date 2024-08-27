@@ -1,1 +1,1 @@
-web: gunicorn src.PrepNotes.wsgi
+web: gunicorn PrepNotes.wsgi
