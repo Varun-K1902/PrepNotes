@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<br>
+<br>
+<div id="main-container" class="min-h-screen bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-200">
+    <!-- Introduction Section -->
+    <section class="py-12">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">Welcome to PrepNotes</h2>
+            <p class="sm:text-xl">
+                PrepNotes is your ultimate destination for BTech study materials! Our mission is to provide students with notes for various subjects, making exam preparation easier and more efficient. Whether you're cramming for finals or looking for resources to help you understand topics, PrepNotes is here to help you succeed.
+            </p>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="container mx-auto px-6">
+        <hr class="my-12 border-t-2 border-gray-300 dark:border-gray-600">
+    </div>
+
+    <!-- Our Story Section -->
+    <section class="py-8">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">Our Story</h2>
+
+                <p class="sm:text-xl">
+                    The idea for PrepNotes was born out of my own experience as a BTech student. During exam times, I often found myself struggling to find proper notes to study. I had to scour different websites, presentations, and textbooks just to find the answers I needed. This led me to compile my own set of notes for various subjects, gathering information from multiple sources. By the end of my BTech, I had comprehensive notes for almost every subject. I realized that other students could benefit from my notes, and that’s how PrepNotes came to life!
+                </p>
+            
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="container mx-auto px-6">
+        <hr class="my-12 border-t-2 border-gray-300 dark:border-gray-600">
+    </div>
+
+    <!-- How It Works Section -->
+    <section class="py-8">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">How It Works</h2>
+                <p class="sm:text-xl">
+                    Using PrepNotes is easy! Simply navigate to the subject of your choice, browse through the list of questions, and find the answers you need. Our notes are organized by subject, making it simple to locate exactly what you’re looking for. Whether you're preparing for exams or just want to deepen your understanding of a topic, PrepNotes is here to guide you.
+                </p>
+        </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="container mx-auto px-6">
+        <hr class="my-12 border-t-2 border-gray-300 dark:border-gray-600">
+    </div>
+
+    <section class="py-8">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">Our Team</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Varun Kumar (Top Center) -->
+                <div class="flex justify-center">
+                    <div class="h-full flex flex-col items-center text-center bg-white dark:bg-gray-900 p-6">
+                        <h2 class="title-font font-medium text-lg text-gray-900 dark:text-white">Varun Kumar</h2>
+                        <h3 class="text-gray-500 dark:text-gray-400 mb-3">Founder & Developer</h3>
+                        <span class="inline-flex">
+                            <a>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-5 h-5" fill="currentColor">
+                                    <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/>
+                                </svg>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+    
+                <!-- Dharma Teja (Bottom Left) -->
+                <div class="flex justify-center items-center">
+                    <div class="h-full flex flex-col items-center text-center bg-white dark:bg-gray-900 p-6">
+                        <h2 class="title-font font-medium text-lg text-gray-900 dark:text-white">Dharma Teja</h2>
+                        <h3 class="text-gray-500 dark:text-gray-400 mb-3">Lead Contributor</h3>
+                        <span class="inline-flex">
+                            <a>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-5 h-5" fill="currentColor">
+                                    <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/>
+                                </svg>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+    
+                <!-- Satish Gani (Bottom Right) -->
+                <div class="flex justify-center items-center">
+                    <div class="h-full flex flex-col items-center text-center bg-white dark:bg-gray-900 p-6">
+                        <h2 class="title-font font-medium text-lg text-gray-900 dark:text-white">Satish Gani</h2>
+                        <h3 class="text-gray-500 dark:text-gray-400 mb-3">Contributor</h3>
+                        <span class="inline-flex">
+                            <a>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-5 h-5" fill="currentColor">
+                                    <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/>
+                                </svg>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Divider -->
+    <div class="container mx-auto px-6">
+        <hr class="my-12 border-t-2 border-gray-300 dark:border-gray-600">
+    </div>
+
+    <!-- Call to Action Section -->
+    <section class="py-12 text-center">
+        <h2 class="mb-4 text-4xl tracking-tight font-bold text-gray-900 dark:text-white">Join Us Today!</h2>
+        <p class="sm:text-xl mb-4">
+            Ready to ace your exams? Start exploring PrepNotes today and take the first step towards academic success!
+        </p>
+        <a href="{% url 'home' %}"><button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">Get Started</button></a>
+    </section>
+
+</div>
+
+
+{% endblock content %}

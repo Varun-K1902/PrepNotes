@@ -1,0 +1,59 @@
+{% extends 'base.html '%}
+
+{% block content %}
+<main class="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900 antialiased mb-20">
+    <div class="flex justify-center px-4 mx-auto max-w-screen-2xl">
+        <article class="mx-auto w-full max-w-[794px] format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
+
+            <a href="{% url 'posts' post.subject %}?page={{page}}&search={{search}}" class="fixed left-4 text-gray-900 dark:text-gray-100 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-full p-4 shadow-lg focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 z-50 flex items-center">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 19l-7-7 7-7"></path>
+                </svg>
+                <span class="hidden sm:inline text-sm font-medium">Go Back</span>
+            </a>
+
+            <div class="mt-3">
+
+                <span class="inline-block text-xs font-medium text-gray-700 dark:text-gray-300 bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-md">
+                    {{post.subject}}
+                </span>
+                </div>
+                <div class="my-4 border-t border-gray-300 dark:border-gray-600"></div>
+            <p class="text-3xl font-bold text-gray-900 dark:text-white">
+                {{post.question}}
+            </p>
+            <!-- Divider using Tailwind CSS -->
+            <div class="my-4 border-t border-gray-300 dark:border-gray-600"></div>
+            <div class="dynamic-content text-1xl">
+            {{post.answer|safe}}
+            </div>
+        </div>
+        </div>
+    
+    
+
+        <button id="scroll-to-top" type="button" class="fixed bottom-4 right-4 p-4 flex items-center justify-center text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-full text-lg w-12 h-12 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800">
+            ↑
+        </button>
+                
+        </article>
+    </div>
+</main>
+
+<style>
+    .dark .dynamic-content * {
+        color: #ffffff !important; /* Ensures all child elements respect dark mode */
+        background-color: transparent !important; /* Optional: reset background */
+    }
+</style>
+<script>
+    // Function to scroll to the top of the page
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Event listener for the scroll-to-top button
+    document.getElementById('scroll-to-top').addEventListener('click', scrollToTop);
+</script>
+
+{% endblock content %}
