@@ -135,7 +135,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 TAILWIND_APP_NAME = 'theme' # This is the name of the app that will be used to generate the tailwind files
 INTERNAL_IPS = ['prepnotes.me', 'hydrophobic-finch-y97ovybh7zbyky6voacx8o78.herokudns.com']
 
-NPM_BIN_PATH = '/usr/local/bin/npm'
+NPM_BIN_PATH = '/app/.local/state/fnm_multishells/29_1724768850072/bin/npm'
 
 # for windows
 #NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
