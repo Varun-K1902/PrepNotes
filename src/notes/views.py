@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from . import models
 from django.core.mail import send_mail
+from django.conf import settings
 
 def home_page(request):
     search = request.GET.get('search', '')
@@ -56,8 +57,8 @@ def contact_page(request):
         send_mail(
             "StudyNotes: " + request.POST.get('subject', ''),  # Subject
             'From: ' + request.POST.get('email', '') + "\n" + request.POST.get('msg',''),  # Message
-            '20N31A05F8@gmail.com',  # From email
-            ['varun.k1902@gmail.com'],  # To email
+            settings.EMAIL_HOST_USER,  # From email
+            [settings.EMAIL_TO_USER],  # To email
             fail_silently=False,
         )
     return render(request, 'notes/contact_page.html')

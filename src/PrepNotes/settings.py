@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -20,12 +20,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-agxfqg*cb&u2!v(#6&x%g56g4r1ou^@go$g1&*=w58(fz)c+09'
+SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['prepnotes.me', 'hydrophobic-finch-y97ovybh7zbyky6voacx8o78.herokudns.com']
 
 
 # Application definition
@@ -121,6 +121,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
+STATIC_ROOT = BASE_DIR / 'prodstatic'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -129,9 +133,30 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 TAILWIND_APP_NAME = 'theme' # This is the name of the app that will be used to generate the tailwind files
-INTERNAL_IPS = ['127.0.0.1']
+INTERNAL_IPS = ['prepnotes.me', 'hydrophobic-finch-y97ovybh7zbyky6voacx8o78.herokudns.com']
 
-#NPM_BIN_PATH = '/usr/local/bin/npm'
+NPM_BIN_PATH = '/usr/local/bin/npm'
 
 # for windows
-NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
+#NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
+
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'  # Replace with your SMTP server's host
+EMAIL_PORT = 587  # Common ports are 587 for TLS, 465 for SSL
+EMAIL_USE_TLS = True  # Use TLS or SSL as required by your SMTP server
+EMAIL_USE_SSL = False  # Use SSL if TLS is not required
+EMAIL_HOST_USER = os.environ['EMAIL_HOST_USER']  # Your email address
+EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD']  # Your email password
+EMAIL_TO_USER = os.environ['EMAIL_TO_USER']  # Default sender address
+
+TINYMCE_DEFAULT_CONFIG = {
+  "theme": "silver",
+  "resize": "false",
+  "menubar": "file edit view insert format tools table help",
+  "toolbar":
+    "undo redo | bold italic underline strikethrough | fontselect fontsizeselect customerfontsizeselect formatselect | alignleft aligncenter alignright alignjustify | outdent indent |  numlist bullist checklist | forecolor backcolor casechange permanentpen formatpainter removeformat | pagebreak | charmap emoticons | fullscreen  preview save print | insertfile image media pageembed template link anchor codesample | a11ycheck ltr rtl | showcomments addcomment code typography",
+  "plugins":
+    "advlist autolink lists link image charmap print preview anchor searchreplace visualblocks code fullscreen insertdatetime media table powerpaste advcode help wordcount spellchecker typography",
+  "selector": "textarea",
+};
