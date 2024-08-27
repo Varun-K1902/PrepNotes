@@ -28,7 +28,7 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.prepnotes.me','prepnotes.me', 'hydrophobic-finch-y97ovybh7zbyky6voacx8o78.herokudns.com', 'prepnotes-999c25a3799e.herokuapp.com', 'www.prepnotes-999c25a3799e.herokuapp.com']
+ALLOWED_HOSTS = ['www.prepnotes.me','prepnotes.me', 'hydrophobic-finch-y97ovybh7zbyky6voacx8o78.herokudns.com', 'prepnotes-999c25a3799e.herokuapp.com', 'www.prepnotes-999c25a3799e.herokuapp.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -83,8 +83,12 @@ WSGI_APPLICATION = 'PrepNotes.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres.piqdbpzrgaddreuurthx',
+        'PASSWORD': os.environ['DB_PW'],
+        'HOST': 'aws-0-ap-south-1.pooler.supabase.com',
+        'PORT': '6543',  # Default PostgreSQL port
     }
 }
 
@@ -139,7 +143,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 TAILWIND_APP_NAME = 'theme' # This is the name of the app that will be used to generate the tailwind files
-INTERNAL_IPS = ['www.prepnotes.me','prepnotes.me', 'hydrophobic-finch-y97ovybh7zbyky6voacx8o78.herokudns.com', 'www.prepnotes-999c25a3799e.herokuapp.com', 'prepnotes-999c25a3799e.herokuapp.com']
+INTERNAL_IPS = ['localhost', '127.0.0.1','www.prepnotes.me','prepnotes.me', 'hydrophobic-finch-y97ovybh7zbyky6voacx8o78.herokudns.com', 'www.prepnotes-999c25a3799e.herokuapp.com', 'prepnotes-999c25a3799e.herokuapp.com']
 
 #NPM_BIN_PATH = '/app/.local/state/fnm_multishells/29_1724768850072/bin/npm'
 NPM_BIN_PATH = "/app/node_modules/.bin/npm"
