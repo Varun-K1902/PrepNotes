@@ -30,7 +30,7 @@ def posts_page(request, pk):
     subject = models.Subject.objects.get(title=pk)
     posts = subject.posts.filter(question__icontains=search)
 
-    paginator = Paginator(posts, 9)
+    paginator = Paginator(posts, 5)
     page_num = request.GET.get('page', 1)
 
     try:
