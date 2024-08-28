@@ -46,7 +46,7 @@
 					// JavaScript to control the modal visibility
 					document.addEventListener('DOMContentLoaded', function() {
 						// Check if the disclaimer has been shown before
-						const disclaimerShown = false//localStorage.getItem('disclaimerShown');
+						const disclaimerShown = localStorage.getItem('disclaimerShown');
 			
 						// If not shown before, show the modal
 						if (!disclaimerShown) {
