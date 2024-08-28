@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = os.environ['DEBUG']
 
 ALLOWED_HOSTS = ['www.prepnotes.me','prepnotes.me', 'hydrophobic-finch-y97ovybh7zbyky6voacx8o78.herokudns.com', 'prepnotes-999c25a3799e.herokuapp.com', 'www.prepnotes-999c25a3799e.herokuapp.com', 'localhost', '127.0.0.1']
 
