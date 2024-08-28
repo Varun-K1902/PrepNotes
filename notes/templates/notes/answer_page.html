@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<main class="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900 antialiased mb-20">
+<main class="pt-8 pb-16 lg:pt-8 lg:pb-24 bg-white dark:bg-gray-900 antialiased mb-20">
     <div class="flex justify-center px-4 mx-auto max-w-screen-2xl">
         <article class="mx-auto w-full max-w-[794px] format format-sm sm:format-base lg:format-lg format-blue dark:format-invert">
 
@@ -44,6 +44,10 @@
     .dark .dynamic-content * {
         color: #ffffff !important; /* Ensures all child elements respect dark mode */
         background-color: transparent !important; /* Optional: reset background */
+    }
+    img {
+   max-width: 100% !important;
+   height: auto !important;
     }
 </style>
 <script>
