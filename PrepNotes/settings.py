@@ -23,10 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = "django-insecure-agxfqg*cb&u2!v(#6&x%g56g4r1ou^@go$g1&*=w58(fz)c+09"#os.environ['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ['DEBUG']
+DEBUG = True#os.environ['DEBUG']
 
 ALLOWED_HOSTS = ['www.prepnotes.me','prepnotes.me', 'hydrophobic-finch-y97ovybh7zbyky6voacx8o78.herokudns.com', 'prepnotes-999c25a3799e.herokuapp.com', 'www.prepnotes-999c25a3799e.herokuapp.com', 'localhost', '127.0.0.1']
 
@@ -86,7 +86,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'postgres',
         'USER': 'postgres.piqdbpzrgaddreuurthx',
-        'PASSWORD': os.environ['DB_PW'],
+        'PASSWORD': "tkHvQPf5fYoKJmbf",#os.environ['DB_PW'],
         'HOST': 'aws-0-ap-south-1.pooler.supabase.com',
         'PORT': '6543',  # Default PostgreSQL port
     }
@@ -146,11 +146,11 @@ TAILWIND_APP_NAME = 'theme' # This is the name of the app that will be used to g
 INTERNAL_IPS = ['localhost', '127.0.0.1','www.prepnotes.me','prepnotes.me', 'hydrophobic-finch-y97ovybh7zbyky6voacx8o78.herokudns.com', 'www.prepnotes-999c25a3799e.herokuapp.com', 'prepnotes-999c25a3799e.herokuapp.com']
 
 #NPM_BIN_PATH = '/app/.local/state/fnm_multishells/29_1724768850072/bin/npm'
-NPM_BIN_PATH = "/app/.heroku/node/bin/npm"
+#NPM_BIN_PATH = "/app/.heroku/node/bin/npm"
 
 
 # for windows
-#NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
+NPM_BIN_PATH = r"C:\Program Files\nodejs\npm.cmd"
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -158,9 +158,9 @@ EMAIL_HOST = 'smtp.gmail.com'  # Replace with your SMTP server's host
 EMAIL_PORT = 587  # Common ports are 587 for TLS, 465 for SSL
 EMAIL_USE_TLS = True  # Use TLS or SSL as required by your SMTP server
 EMAIL_USE_SSL = False  # Use SSL if TLS is not required
-EMAIL_HOST_USER = os.environ['EMAIL_HOST_USER']  # Your email address
-EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD']  # Your email password
-EMAIL_TO_USER = os.environ['EMAIL_TO_USER']  # Default sender address
+# EMAIL_HOST_USER = os.environ['EMAIL_HOST_USER']  # Your email address
+# EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD']  # Your email password
+# EMAIL_TO_USER = os.environ['EMAIL_TO_USER']  # Default sender address
 
 TINYMCE_DEFAULT_CONFIG = {
   "theme": "silver",
